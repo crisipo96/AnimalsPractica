@@ -1,0 +1,62 @@
+is_global = true
+build_property.PropertyChangedAnalyzerConfiguration = 
+build_property.TargetFramework = net8.0-windows10.0.19041.0
+build_property.TargetPlatformMinVersion = 10.0.17763.0
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 9A19103F-16F7-4668-BE54-9A1E7A4F7556
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = AnimalsPractica
+build_property.ProjectDir = C:\Users\crist\source\repos\AnimalsPractica\AnimalsPractica\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+
+[C:/Users/crist/source/repos/AnimalsPractica/AnimalsPractica/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AnimalsPractica.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/Users/crist/source/repos/AnimalsPractica/AnimalsPractica/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AnimalsPractica.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/Users/crist/source/repos/AnimalsPractica/AnimalsPractica/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AnimalsPractica.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[C:/Users/crist/source/repos/AnimalsPractica/AnimalsPractica/MVVM/Views/MainView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AnimalsPractica.MVVM.Views.MainView.xaml
+build_metadata.AdditionalFiles.TargetPath = MVVM\Views\MainView.xaml
+build_metadata.AdditionalFiles.RelativePath = MVVM\Views\MainView.xaml
+
+[C:/Users/crist/source/repos/AnimalsPractica/AnimalsPractica/MVVM/Views/NewAnimalView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AnimalsPractica.MVVM.Views.NewAnimalView.xaml
+build_metadata.AdditionalFiles.TargetPath = MVVM\Views\NewAnimalView.xaml
+build_metadata.AdditionalFiles.RelativePath = MVVM\Views\NewAnimalView.xaml
+
+[C:/Users/crist/source/repos/AnimalsPractica/AnimalsPractica/MVVM/Views/UpdateAnimalView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AnimalsPractica.MVVM.Views.UpdateAnimalView.xaml
+build_metadata.AdditionalFiles.TargetPath = MVVM\Views\UpdateAnimalView.xaml
+build_metadata.AdditionalFiles.RelativePath = MVVM\Views\UpdateAnimalView.xaml
+
+[C:/Users/crist/source/repos/AnimalsPractica/AnimalsPractica/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AnimalsPractica.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/Users/crist/source/repos/AnimalsPractica/AnimalsPractica/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AnimalsPractica.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml

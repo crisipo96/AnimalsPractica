@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AnimalsPractica.MVVM.Views.NewAnimalView"
+             Title="NewAnimalView">
+    
+    <Grid ColumnDefinitions="*,*,*" RowDefinitions="*,*,*,*,*" Padding="5,50,5,70">
+        
+        <Entry Placeholder="introduce el nombre"
+               Text="{Binding Name}"
+               VerticalOptions="Center"
+               Grid.Column="1"/>
+        
+        <Entry Placeholder="introduce el tipo"
+               Grid.Row="1"
+               Text="{Binding Type}"
+               VerticalOptions="Center"
+               Grid.Column="1"/>
+        
+        <Entry Placeholder="introduce el sexo"
+               Grid.Row="2"
+               Text="{Binding Sex}"
+               VerticalOptions="Center"
+               Grid.Column="1"/>
+        
+        <Entry Placeholder="introduce la fecha de nacimiento"
+               Grid.Row="3"
+               Text="{Binding DOB}"
+               VerticalOptions="Center"
+               Grid.Column="1"/>
+        
+        <Button Text="Añadir animal"
+                Grid.Row="4"
+                Grid.Column="1"
+                Command="{Binding AddAnimalGoBack}"
+                CommandParameter="{Binding .}"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+    </Grid>
+    
+</ContentPage>

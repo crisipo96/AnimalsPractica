@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AnimalsPractica.MVVM.Views.MainView"
+             xmlns:viewmodel="clr-namespace:AnimalsPractica.MVVM.ModelViews"
+             Title="MainView">
+
+    <Grid BackgroundColor="GhostWhite" Padding="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <!--Encabezado-->
+        <HorizontalStackLayout Grid.Row="0" Grid.ColumnSpan="2" HorizontalOptions="Center" VerticalOptions="Center">
+            <Label Text="Lista de Animales"                  
+                FontSize="Title"
+                Margin="10"
+                FontAttributes="Bold"></Label>
+        </HorizontalStackLayout>
+
+        <!--Cuerpo (botón y lista tareas)-->
+      
+        <Button Text="Añadir animal"
+                    Command="{Binding newAnimalViewCommand}"
+                    CommandParameter="{Binding .}"
+                    HorizontalOptions="Center"
+                    WidthRequest="200"
+                    Grid.Row="1"
+                    Grid.ColumnSpan="2"
+                    CornerRadius="100"
+                    FontAttributes="Bold"
+                    BackgroundColor="CornflowerBlue"
+                    FontFamily="monospace"
+                    Margin="30"/>
+
+        <Button Text="Obtener animal por ID"
+                    Command="{Binding GetAnimalByIdCommand}"
+                    CommandParameter="{Binding .}"
+                    WidthRequest="200"
+                    Grid.Row="2" 
+                    HorizontalOptions="Start"
+                    CornerRadius="100"
+                    FontAttributes="Bold"
+                    BackgroundColor="CornflowerBlue"
+                    FontFamily="monospace"
+                    Margin="30"/>
+            <Entry Placeholder="Escribe aquí el ID"
+                    Text="{Binding IDanimal}"
+                    Margin="20"
+                    HorizontalTextAlignment="Center"
+                    HorizontalOptions="End"
+                    Grid.Row="2" 
+                    Grid.Column="1"
+                    FontAttributes="Bold"/>
+
+
+            <CollectionView ItemsSource="{Binding Animals}" EmptyView="No hay animales que mostrar"
+                        Grid.Row="3" Grid.ColumnSpan="2">
+            <CollectionView.ItemTemplate>
+
+                <DataTemplate>
+
+                    <Grid RowDefinitions="*,*,*,*" ColumnDefinitions="*,*" BackgroundColor="LightCyan" Margin="7">
+
+                        <Frame Grid.ColumnSpan="2" Grid.RowSpan="4"  BorderColor="Blue" Margin="3">
+                            <Frame.Background>
+                                <LinearGradientBrush EndPoint="1,0">
+                                    <GradientStop Offset="0" Color="LightBlue"/>
+                                    <GradientStop Offset="1" Color="AliceBlue"/>
+
+                                </LinearGradientBrush>
+                            </Frame.Background>
+                        </Frame>
+
+                        <HorizontalStackLayout Margin="5">
+                            <Label Text="Nombre: "
+                               Margin="5"
+                               FontSize="Medium"
+                               FontAttributes="Bold"/>
+                            <Label Text="{Binding Name}" 
+                               Margin="5"
+                               FontSize="Medium"/>
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout  Grid.Row="1"  Margin="5">
+                            <Label Text="Tipo: "
+                               Grid.Row="1"
+                               Margin="5"
+                               FontSize="Medium"
+                               FontAttributes="Bold"/>
+                            <Label Text="{Binding Type}"
+                               Grid.Row="1"
+                               Margin="5"
+                               FontSize="Medium"/>
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout  Grid.Row="2" Margin="5">
+                            <Label Text="Sexo: "
+                               Grid.Row="1"
+                               Margin="5"
+                               FontSize="Medium"
+                               FontAttributes="Bold"/>
+                            <Label Text="{Binding Sex}"
+                               Grid.Row="1"
+                               Margin="5"
+                               FontSize="Medium"/>
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout  Grid.Row="3" Margin="5">
+                            <Label Text="Nacimiento: "
+                                    Grid.Row="1"
+                                    Margin="5"
+                                    FontSize="Medium"
+                                    FontAttributes="Bold"/>
+                            <Label Text="{Binding DOB}"
+                                    Grid.Row="1"
+                                    Margin="5"
+                                    FontSize="Medium"/>
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout Grid.RowSpan="4" Grid.Column="1" HorizontalOptions="Center">
+                            <Button Margin="7"
+                                    Text="Borrar"
+                                    VerticalOptions="Center"
+                                    Command="{Binding DeleteAnimalCommand, Source={RelativeSource AncestorType={x:Type viewmodel:MainViewModel}}}"
+                                    CommandParameter="{Binding .}">
+                            </Button>
+                            <Button HorizontalOptions="End"
+                                    Text="Actualizar"
+                                    VerticalOptions="Center"
+                                    Command="{Binding UpdateAnimalViewCommand, Source={RelativeSource AncestorType={x:Type viewmodel:MainViewModel}}}"
+                                    CommandParameter="{Binding .}">
+                            </Button>
+
+                        </HorizontalStackLayout>
+
+
+                    </Grid>
+
+                </DataTemplate>
+
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
+
+    </Grid>
+
+
+
+</ContentPage>
